@@ -1,0 +1,96 @@
+.c-navigation {
+
+    &__main {
+        width: 15%;
+        position: absolute;
+        top: 0;
+        padding-right: 10px;
+        margin-top: 46px;
+        transition: all 0.6 ease-in-out;
+        display: none;
+
+        @include mq-min($bp-lg) {
+            display: block;
+        }
+    }
+
+    &__list {
+        li {
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        padding: 10px;
+        color: $color-white;
+        background: $color-green;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        display: block;
+        
+        &:hover {
+            border: 0px solid transparent!important;
+            background: $color-black-dark;
+            padding-left: 15px;
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+
+    &__mob {
+        display: block;
+
+        @include mq-min($bp-lg) {
+            display: none;
+        }
+
+        &--nav {
+            overflow: hidden;
+            background-color: $color-black-dark;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            opacity: 0.8;
+            
+            a {
+                font-size: 1rem;
+                padding: 14px 16px;
+                color: $color-white;
+                display: block;
+
+                &.active {
+                    background: $color-black-dark;
+                }
+
+                &.icon {
+                    background: $color-black-dark;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+
+        &--link {
+            overflow-y: hidden;
+            max-height: 250px;
+            transition-property: all;
+            transition-duration: .5s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            height: 250px;
+            width: 100%;
+
+            &.closed {
+                max-height: 0px;
+            }
+        }
+    }
+}
