@@ -1,0 +1,60 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-main;
+    color: $color-black-light;
+    overflow-x: hidden;
+    background: url("../../../src/assets/avinash_bg.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 170%;
+}
+
+*:focus:not(:hover) {
+    outline: 2px solid $color-green;
+}
+
+*:focus:hover {
+    outline: 0 none;
+}
+
+::selection {
+    background: $color-green;
+    color: $color-white;
+}
+
+main {
+    font-size: 2.2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 170%;
+
+@include mq-min($bp-md) {
+        font-size: 3.4rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+  
